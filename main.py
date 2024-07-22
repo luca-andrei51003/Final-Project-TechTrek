@@ -1,6 +1,7 @@
 from datetime import datetime
 from collections import defaultdict
 from statistics import mean
+import time
  
  
 class Log:
@@ -223,3 +224,6 @@ if __name__ == "__main__":
     result_task_9 = log_analyzer.failure_rate_per_app()
     for app, failure_rate in result_task_9.items():
         print(f'{app}: {failure_rate:.2f}%')
+    
+    #while True:
+    time.sleep(4)
