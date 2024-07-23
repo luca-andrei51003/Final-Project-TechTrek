@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tech-trek-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/luca-andrei51003/Final-Project-TechTrek'
+    targetRevision: HEAD
+    path: manifests
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: tech-trek-project
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
