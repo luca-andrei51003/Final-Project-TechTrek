@@ -226,4 +226,4 @@ if __name__ == "__main__":
         print(f'{app}: {failure_rate:.2f}%')
     
     #while True:
-    time.sleep(3)
+    time.sleep(4)
