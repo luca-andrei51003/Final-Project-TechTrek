@@ -22,18 +22,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract version from file
-        id: get_version
+      - name: Build Docker image
         run: |
-          VERSION=$(grep -oP '(?<=^version=).*' setup.py)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-
-      - name: Build and tag Docker image
-        run: |
-          docker build -t your_dockerhub_username/your_repo_name:${{ env.VERSION }} .
-          docker tag your_dockerhub_username/your_repo_name:${{ env.VERSION }} your_dockerhub_username/your_repo_name:latest
-
+          docker build -t culceanluca/ttproject:1 .
+          
       - name: Push Docker image
         run: |
-          docker push your_dockerhub_username/your_repo_name:${{ env.VERSION }}
-          docker push your_dockerhub_username/your_repo_name:latest
+          docker push culceanluca/ttproject:1
