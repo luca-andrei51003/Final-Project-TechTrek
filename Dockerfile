@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["python", "./main.py"]
+CMD ["docker pull culceanluca/ttproject:1", "python", "./main.py"]
