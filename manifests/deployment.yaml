@@ -15,6 +15,7 @@ spec:
       containers:
       - name: ttproject
         image: culceanluca/ttproject:1
+        imagePullPolicy: Always
         command: ["/bin/sh", "-c", "python3 ./main.py; while true; do sleep 3600; done"]
         ports:
         - containerPort: 8080
