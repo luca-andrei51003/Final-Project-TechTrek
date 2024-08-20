@@ -16,3 +16,4 @@ spec:
     automated:
       prune: true
       selfHeal: true
+#kubectl port-forward svc/argocd-server -n argocd 8080:443
