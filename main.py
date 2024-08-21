@@ -225,5 +225,9 @@ if __name__ == "__main__":
     for app, failure_rate in result_task_9.items():
         print(f'{app}: {failure_rate:.2f}%')
     
+
     #while True:
     print("workflow works 3.141")
+    #while True::
+    print("workflow works 3.2")
+
